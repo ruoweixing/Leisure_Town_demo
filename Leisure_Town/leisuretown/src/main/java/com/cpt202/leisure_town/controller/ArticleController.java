@@ -18,10 +18,10 @@ public class ArticleController {
 
     @Autowired
     private ArticleService articleService;
-	//Result是统一结果返回
+	// Result是统一结果返回
     @PostMapping
     public Result articles(@RequestBody PageParams pageParams) {
-        //ArticleVo 页面接收的数据
+        // ArticleVo 页面接收的数据
         return articleService.listArticlesPage(pageParams);
 //
 //        return Result.success(articles) ;
